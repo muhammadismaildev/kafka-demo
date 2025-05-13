@@ -1,7 +1,7 @@
 import { Kafka } from 'kafkajs';
 import EVENTS from '../../../constants/events.js';
 
-const kafka = new Kafka({ clientId: 'email-service', brokers: ['localhost:9092'] });
+const kafka = new Kafka({ clientId: 'email-service', brokers: ['kafka:9092'] });
 const consumer = kafka.consumer({ groupId: 'email-group' });
 
 export const connectConsumer = async () => {

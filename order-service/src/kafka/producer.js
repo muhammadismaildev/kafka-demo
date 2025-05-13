@@ -7,7 +7,7 @@ const PARTITIONS_MAP = {
     'Islamabad': 2
 }
 
-const kafka = new Kafka({ clientId: 'order-service', brokers: ['localhost:9092'] });
+const kafka = new Kafka({ clientId: 'order-service', brokers: ['kafka:9092'] });
 
 const MyPartitioner = () => {
     return ({ topic, partitionMetadata, message }) => {
